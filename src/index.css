@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import "tailwindcss";
+
 @theme {
   --color-primary: #030412;
   --color-midnight: #06091f;
@@ -14,11 +15,13 @@
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
+
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
     0% {
       transform: rotate(calc(var(--angle) * 1deg))
-        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+        translateY(calc(var(--radius) * 1px))
+        rotate(calc(var(--angle) * -1deg));
     }
     100% {
       transform: rotate(calc(var(--angle) * 1deg + 360deg))
@@ -26,6 +29,7 @@
         rotate(calc((var(--angle) * -1deg) - 360deg));
     }
   }
+
   --animate-marquee: marquee 50s linear infinite;
   --animate-marquee-vertical: marquee-vertical 50s linear infinite;
 
@@ -47,6 +51,7 @@
     }
   }
 }
+
 body {
   background: #030412;
   font-family: "Funnel Display", sans-serif;
@@ -91,6 +96,7 @@ body {
 .nav-link {
   @apply text-lg md:text-base hover:text-white transition-colors;
 }
+
 /* Button Components */
 .btn {
   @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
@@ -98,17 +104,21 @@ body {
 
 /* About Section */
 .grid-1 {
-  @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+  @apply row-span-2 md:col-span-3 min-h-fit relative hover:-translate-y-1 duration-200;
 }
+
 .grid-2 {
   @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
+
 .grid-3 {
   @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
+
 .grid-4 {
   @apply row-span-1 md:col-span-2 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
+
 .grid-5 {
   @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
@@ -120,11 +130,12 @@ body {
 .grid-special-color {
   @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl;
 }
+
 .grid-black-color {
   @apply p-6 bg-gradient-to-tl from-[#3A3A3A] via-[#242424] to-[#3A3A3A] rounded-2xl;
 }
 
-/* Contact Section*/
+/* Contact Section */
 .field-label {
   @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
 }
