@@ -52,7 +52,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative c-space section-spacing">
+    <section className="relative c-space section-spacing" id="contact">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -130,13 +130,13 @@ const Contact = () => {
         </div>
 
         {/* Right Side Quote */}
-       <div className="w-full md:w-1/2 px-4 text-center md:text-left text-white">
-  <h3 className="text-3xl md:text-4xl font-extrabold leading-relaxed tracking-wide">
-    Building <span className="text-yellow-400">better</span> every<br />
-    line at a <span className="text-yellow-400">time</span>.
-  </h3>
-  <p className="mt-4 text-base text-white/60 font-light">– Abilash EG</p>
-</div>
+        <div className="w-full md:w-1/2 px-4 text-center md:text-left text-white">
+          <h3 className="text-3xl md:text-4xl font-extrabold leading-relaxed tracking-wide">
+            Building <span className="text-yellow-400">better</span> every<br />
+            line at a <span className="text-yellow-400">time</span>.
+          </h3>
+          <p className="mt-4 text-base text-white/60 font-light">– Abilash EG</p>
+        </div>
 
       </div>
     </section>

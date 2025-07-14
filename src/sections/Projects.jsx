@@ -3,7 +3,7 @@ import Projects from "../components/Project";
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="py-16 px-4 max-w-6xl mx-auto">
+    <section id="work" className="py-16 px-4 max-w-6xl mx-auto">
       <h2 className="text-3xl font-display font-bold text-primary mb-8 text-center">
         Projects
       </h2>
