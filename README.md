@@ -78,13 +78,6 @@ Create a service (e.g., Gmail API)
 
 Create an email template with name, email, and message variables
 
-Copy:
-
-Service ID: service_rvpakmh
-
-Template ID: template_js65gcv
-
-Public Key: mjwrLTppWMG32EGZu
 
 Implemented in Contact.jsx with success and error alerts
 
@@ -108,24 +101,10 @@ Go to https://vercel.com
 
 Login with GitHub and import the repository.
 
-Use default settings for a React (Vite) app.
 
-Vercel builds and deploys automatically on every push to main.
-
-🪪 Custom Domain (Optional)
-Vercel allows you to assign custom domains (free if using .vercel.app)
-
-For .com, .in, etc.:
-
-You can purchase a domain via Namecheap, GoDaddy, or Vercel itself.
-
-Cost: ₹500–₹1500/year (approx.)
-
-Point domain DNS to Vercel from the domain provider dashboard.
 
 🔍 Final Deployment
 Live URL: https://abilasheg.vercel.app
 
 Custom favicon was added to give a professional brand identity
 
-All navigation issues, case sensitivity in file names, and deployment errors were resolved.
