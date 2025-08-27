@@ -71,6 +71,60 @@ export const myProjects = [
       { id: 3, name: "QuickSight", path: "/assets/logos/quicksight.svg" },
     ],
   },
+  {
+    id: 5,
+    title: "Advanced Diabetes Prediction System",
+    description:
+      "An AI-powered web application that predicts diabetes risk and provides personalized health recommendations using a machine learning model trained on clinical and lifestyle features.",
+    subDescription: [
+      "Utilized clinical and lifestyle data for training machine learning models.",
+      "Delivered personalized health recommendations based on predictions.",
+      "Built a user-friendly AI-powered web interface.",
+    ],
+    href: "https://github.com/AbilashEG/advanced-diabetes-prediction",
+    image: "",
+    tags: [
+      { id: 1, name: "AI", path: "/assets/logos/ai.svg" },
+      { id: 2, name: "Machine Learning", path: "/assets/logos/ml.svg" },
+      { id: 3, name: "React", path: "/assets/logos/react.svg" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Smart HR Management System",
+    description:
+      "A comprehensive, AI-powered HR management system that automates the entire recruitment workflow from resume upload to candidate evaluation. Built with modern React.js frontend and Node.js backend, integrated with AWS cloud services for scalability and AI capabilities.",
+    subDescription: [
+      "Implemented recruitment automation with AI integration.",
+      "Developed frontend in React.js and backend in Node.js.",
+      "Leveraged AWS cloud services for scalability and performance.",
+    ],
+    href: "https://github.com/AbilashEG/End-to-End-HR-management-using-react-and-nodejs-and-aws-services-",
+    image: "",
+    tags: [
+      { id: 1, name: "AWS", path: "/assets/logos/aws.svg" },
+      { id: 2, name: "React", path: "/assets/logos/react.svg" },
+      { id: 3, name: "Node.js", path: "/assets/logos/nodejs.svg" },
+    ],
+  },
+  {
+    id: 7,
+    title: "Movie Ticket Booking Bot (Flask + AWS Bedrock)",
+    description:
+      "An intelligent conversational bot that helps users book movie tickets via chat! Built using Amazon Bedrock for natural language understanding.",
+    subDescription: [
+      "Developed conversational interface with AWS Bedrock (Claude/Nova Pro).",
+      "Integrated with ticket booking services for real-time operations.",
+      "Built backend with Flask to handle logic and API requests.",
+    ],
+    href: "https://github.com/AbilashEG/Movie-ticket-booking-bot",
+    image: "",
+    tags: [
+      { id: 1, name: "AWS", path: "/assets/logos/aws.svg" },
+      { id: 2, name: "Flask", path: "/assets/logos/flask.svg" },
+      { id: 3, name: "Chatbot", path: "/assets/logos/chatbot.svg" },
+    ],
+  },
 ];
 
 export const mySocials = [
@@ -107,5 +161,10 @@ export const learningNow = {
     "Hands-on with AWS Bedrock Agents and knowledge bases",
     "Fine-tuning models using Amazon SageMaker JumpStart",
     "Experimenting with data storytelling in QuickSight",
+    "Building Agentic AI systems with multi-step reasoning",
+    "Implementing Retrieval-Augmented Generation (RAG) pipelines",
+    "Designing multi-agent collaboration frameworks",
+    "Applying responsible AI guardrails and bias detection",
+    "Automating cloud workflows with LLM-powered agents",
   ],
-};
+}
