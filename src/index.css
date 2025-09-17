@@ -147,3 +147,44 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+/* PROJECT CARDS - PREVENT WHITE BACKGROUND IN LIGHT MODE */
+[class*="card"],
+[class*="Card"],
+[class*="project"],
+[class*="Project"],
+[class*="portfolio"],
+[class*="Portfolio"],
+.bg-white,
+.bg-gray-50,
+.bg-gray-100,
+.bg-slate-50,
+.bg-slate-100 {
+  background: linear-gradient(180deg, var(--color-storm), var(--color-indigo)) !important;
+  background-color: var(--color-indigo) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 1rem !important;
+}
+
+/* Force card text to be visible */
+[class*="card"] *,
+[class*="Card"] *,
+[class*="project"] *,
+[class*="Project"] *,
+[class*="portfolio"] *,
+[class*="Portfolio"] * {
+  color: white !important;
+}
+
+/* Card hover effects */
+[class*="card"]:hover,
+[class*="Card"]:hover,
+[class*="project"]:hover,
+[class*="Project"]:hover,
+[class*="portfolio"]:hover,
+[class*="Portfolio"]:hover {
+  background: linear-gradient(180deg, var(--color-royal), var(--color-lavender)) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
