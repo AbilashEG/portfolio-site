@@ -125,6 +125,25 @@ export const myProjects = [
       { id: 3, name: "Chatbot", path: "/assets/logos/chatbot.svg" },
     ],
   },
+  {
+    id: 8,
+    title: "L1 Activity Automation",
+    description:
+      "Agentic AI ChatBot that revolutionizes AWS CloudWatch management across multiple enterprise accounts with natural language interface, autonomous CloudWatch Agent deployment, and real-time monitoring.",
+    subDescription: [
+      "Multi-account instance discovery and CloudWatch Agent deployment (Windows/Linux).",
+      "Powered by AWS Bedrock (Amazon Nova Pro) for intent recognition and autonomous actions.",
+      "React frontend, Flask backend with production CI/CD via GitHub Actions.",
+    ],
+    href: "https://github.com/AbilashEG/l1-activityAutomation",
+    image: "",
+    tags: [
+      { id: 1, name: "AWS", path: "/assets/logos/aws.svg" },
+      { id: 2, name: "React", path: "/assets/logos/react.svg" },
+      { id: 3, name: "Flask", path: "/assets/logos/flask.svg" },
+      { id: 4, name: "AI", path: "/assets/logos/ai.svg" },
+    ],
+  }
 ];
 
 export const mySocials = [
@@ -143,19 +162,20 @@ export const mySocials = [
 export const experiences = [
   {
     title: "Data and AI Engineer",
-    job: "Quadrasystems.net (AWS Team)",
-    date: "2025–Present",
+    job: "AWS Partner Company",
+    date: "Jun 2025–Present",
     contents: [
-      "Collaborating with AWS services to develop and deploy end-to-end data and AI/ML solutions.",
-      "Built intelligent chatbots using Amazon Bedrock with document understanding and context-aware responses.",
-      "Created real-time dashboards using Amazon QuickSight connected to S3 and Athena.",
-      "Developed ML models in SageMaker using XGBoost and scikit-learn for predictive analytics.",
+      "🏆 Secured 1st Prize in the 'Migratapalooza Hackathon 2025': Demonstrated expert-level database modernization skills by architecting a seamless cloud migration strategy using AWS Database Migration Service (DMS) and Schema Conversion Tool (SCT).",
+      "Architected an autonomous multi-agent AI system using LangGraph and Amazon Bedrock; successfully orchestrated complex workflows for travel itinerary generation and booking validation, reducing planning time by 80%.",
+      "Engineered a production-grade L1 Automation Bot on EC2 for multi-account management; automated critical tasks like instance resizing (GP2→GP3), health checks, and alarm remediation, achieving 99.9% system availability.",
+      "Developed a serverless Enterprise HR Portal integrating Amazon Cognito, Textract, and DynamoDB; streamlined the processing of 500+ candidate profiles and automated document extraction, cutting administrative overhead by 75%.",
+      "Built end-to-end data intelligence pipelines using AWS Lambda, Glue, and Athena; enabled real-time visualization of business KPIs on Amazon QuickSight dashboards to support data-driven decision-making.",
     ],
   },
 ];
 
 export const learningNow = {
-  title: "What I’m Learning Now",
+  title: "What I'm Learning Now",
   items: [
     "Exploring LangChain for document-based LLM workflows",
     "Hands-on with AWS Bedrock Agents and knowledge bases",
@@ -167,4 +187,4 @@ export const learningNow = {
     "Applying responsible AI guardrails and bias detection",
     "Automating cloud workflows with LLM-powered agents",
   ],
-}
+};
