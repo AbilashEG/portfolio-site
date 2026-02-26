@@ -189,6 +189,8 @@ export const experiences = [
       "Engineered a production-grade L1 Automation Bot on EC2 for multi-account management; automated critical tasks like instance resizing (GP2→GP3), health checks, and alarm remediation, achieving 99.9% system availability.",
       "Developed a serverless Enterprise HR Portal integrating Amazon Cognito, Textract, and DynamoDB; streamlined the processing of 500+ candidate profiles and automated document extraction, cutting administrative overhead by 75%.",
       "Built end-to-end data intelligence pipelines using AWS Lambda, Glue, and Athena; enabled real-time visualization of business KPIs on Amazon QuickSight dashboards to support data-driven decision-making.",
+      "Architected an AI-driven MSP Monitoring Dashboard leveraging Amazon Bedrock Nova Pro for intelligent security analysis across 20+ AWS services; implemented 100+ automated security rules with compliance mapping (CIS, PCI-DSS, HIPAA, GDPR), cost optimization recommendations, and real-time health scoring—providing centralized visibility for  customer accounts.",
+
     ],
   },
 ];
