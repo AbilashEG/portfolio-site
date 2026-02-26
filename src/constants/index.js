@@ -143,7 +143,26 @@ export const myProjects = [
       { id: 3, name: "Flask", path: "/assets/logos/flask.svg" },
       { id: 4, name: "AI", path: "/assets/logos/ai.svg" },
     ],
-  }
+  },
+  {
+  "id": 9,
+  "title": "AI-Driven MSP Multi-Account Monitoring Dashboard",
+  "description": "Enterprise AWS monitoring platform for MSPs with AI-powered security analysis, cost optimization, and multi-account resource tracking across 20+ services.",
+  "subDescription": [
+    "Multi-account monitoring with parallel scanning (5 accounts × 10 regions).",
+    "AI security analysis via Amazon Bedrock Nova Pro with compliance mapping.",
+    "Cost optimization engine with idle detection and right-sizing recommendations.",
+    "React + TypeScript frontend, Flask backend with cross-account AssumeRole."
+  ],
+  "href": "https://github.com/AbilashEG/aws-msp-dashboard",
+  "image": "",
+  "tags": [
+    { "id": 1, "name": "AWS", "path": "/assets/logos/aws.svg" },
+    { "id": 2, "name": "React", "path": "/assets/logos/react.svg" },
+    { "id": 3, "name": "Flask", "path": "/assets/logos/flask.svg" },
+    { "id": 4, "name": "AI", "path": "/assets/logos/ai.svg" }
+  ]
+}
 ];
 
 export const mySocials = [
