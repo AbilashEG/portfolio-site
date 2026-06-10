@@ -52,7 +52,7 @@ const TechStackNew = () => {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          opacity: 0.2,
+          opacity: 1,
           zIndex: 0,
           display: "block",
           pointerEvents: "none",
@@ -61,11 +61,11 @@ const TechStackNew = () => {
         <source src="/video/TECH_STACK.webm" type="video/webm" />
       </video>
 
-      {/* ── Dark overlay ── */}
+      {/* ── Dark overlay — light tint so icons stay readable ── */}
       <div style={{
         position: "absolute",
         inset: 0,
-        background: "rgba(11,8,12,0.75)",
+        background: "rgba(11,8,12,0.45)",
         zIndex: 0,
       }} />
 
