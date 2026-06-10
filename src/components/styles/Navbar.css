@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════
-   Pill navbar
+   Pill navbar — fixed, centered, all screen sizes
    ══════════════════════════════════════════════════════ */
 .navbar-pill {
   position: fixed;
@@ -7,16 +7,13 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 14px 36px;
-
-  /* Fade in via initialFX */
-  opacity: 0;
+  opacity: 0; /* fades in via initialFX */
 }
 
 .navbar-list {
@@ -71,89 +68,61 @@
 }
 
 /* ══════════════════════════════════════════════════════
-   Mobile hamburger button
-   ══════════════════════════════════════════════════════ */
-.navbar-hamburger {
-  display: none;
-  position: fixed;
-  top: 16px;
-  right: 20px;
-  z-index: 200;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  color: #eae5ec;
-  font-size: 1.4rem;
-  padding: 8px 10px;
-  cursor: pointer;
-  line-height: 1;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* ══════════════════════════════════════════════════════
-   Mobile drawer
-   ══════════════════════════════════════════════════════ */
-.navbar-drawer {
-  display: none;
-  position: fixed;
-  top: 60px;
-  right: 16px;
-  z-index: 150;
-  background: rgba(11, 8, 12, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 8px;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 160px;
-}
-
-.navbar-drawer-link {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: none;
-  background: transparent;
-  color: #eae5ec;
-  font-family: "Geist", "Inter", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 400;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  transition: background 0.2s;
-}
-
-.navbar-drawer-link:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-}
-
-.navbar-drawer-link--active {
-  background: rgba(167, 139, 250, 0.1);
-  color: #A78BFA;
-}
-
-/* ══════════════════════════════════════════════════════
-   Responsive — hide pill, show hamburger on mobile
+   480–768px — icons + short text, smaller pill
    ══════════════════════════════════════════════════════ */
 @media only screen and (max-width: 768px) {
   .navbar-pill {
+    top: 16px;
+    padding: 10px 16px;
+  }
+
+  .navbar-list {
+    gap: 4px;
+  }
+
+  .navbar-link {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+    gap: 4px;
+  }
+
+  .navbar-link--active {
+    padding: 7px 12px;
+  }
+
+  .navbar-icon {
+    font-size: 1rem;
+  }
+
+  .navbar-chevron {
+    display: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   <480px — icons only, no text labels
+   ══════════════════════════════════════════════════════ */
+@media only screen and (max-width: 480px) {
+  .navbar-pill {
+    top: 14px;
+    padding: 10px 14px;
+  }
+
+  .navbar-link-text {
     display: none;
   }
 
-  .navbar-hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .navbar-link {
+    padding: 8px 10px;
+    gap: 0;
   }
 
-  .navbar-drawer {
-    display: flex;
+  .navbar-link--active {
+    padding: 8px 10px;
+    background: rgba(167, 139, 250, 0.15);
+  }
+
+  .navbar-icon {
+    font-size: 1.15rem;
   }
 }

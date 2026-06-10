@@ -42,12 +42,35 @@ const TechStackNew = () => {
   return (
     <div className="techstack-new" id="skills">
 
+      {/* ── Video background ── */}
+      <video
+        autoPlay loop muted playsInline
+        style={{
+          position: "absolute",
+          top: 0, left: 0,
+          width: "100%", height: "100%",
+          objectFit: "cover",
+          opacity: 0.15,
+          zIndex: 0,
+        }}
+      >
+        <source src="/video/TECH_STACK.webm" type="video/webm" />
+      </video>
+
+      {/* ── Dark overlay ── */}
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "rgba(11,8,12,0.75)",
+        zIndex: 0,
+      }} />
+
       {/* ── Content ── */}
-      <div className="techstack-content">
+      <div className="techstack-content" style={{ position: "relative", zIndex: 1 }}>
         <h2>Tech Stack</h2>
 
         {/* Row 1 — scrolls left */}
-        <div className="ts-marquee-row">
+        <div className="ts-marquee-row" style={{ position: "relative", zIndex: 1 }}>
           <div className="ts-track ts-left">
             {[...ROW1, ...ROW1].map((t, i) => (
               <div className="techstack-item" key={i} title={t.name}>
@@ -59,7 +82,7 @@ const TechStackNew = () => {
         </div>
 
         {/* Row 2 — scrolls right */}
-        <div className="ts-marquee-row">
+        <div className="ts-marquee-row" style={{ position: "relative", zIndex: 1 }}>
           <div className="ts-track ts-right">
             {[...ROW2, ...ROW2].map((t, i) => (
               <div className="techstack-item" key={i} title={t.name}>

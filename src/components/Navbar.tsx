@@ -9,8 +9,6 @@ import {
   HiBriefcase,
   HiMail,
   HiChevronDown,
-  HiMenu,
-  HiX,
 } from "react-icons/hi";
 import "./styles/Navbar.css";
 
@@ -26,11 +24,9 @@ const NAV_LINKS = [
 ];
 
 const Navbar = () => {
-  const [active, setActive]       = useState("Home");
-  const [menuOpen, setMenuOpen]   = useState(false);
+  const [active, setActive] = useState("Home");
 
   useEffect(() => {
-    // ── Lenis smooth scroll ───────────────────────────────────────────────
     lenis = new Lenis({
       duration: 1.7,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -54,7 +50,6 @@ const Navbar = () => {
 
   const scrollTo = (href: string, label: string) => {
     setActive(label);
-    setMenuOpen(false);
     const target = document.querySelector(href) as HTMLElement | null;
     if (!target) return;
     if (lenis) {
@@ -66,7 +61,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ── Pill navbar ──────────────────────────────────────────────────── */}
+      {/* ── Pill navbar — visible on ALL screen sizes ── */}
       <nav className="navbar-pill" aria-label="Main navigation">
         <ul className="navbar-list">
           {NAV_LINKS.map(({ label, icon: Icon, href, dropdown }) => (
@@ -77,7 +72,7 @@ const Navbar = () => {
                 aria-label={label}
               >
                 <Icon className="navbar-icon" />
-                <span>{label}</span>
+                <span className="navbar-link-text">{label}</span>
                 {dropdown && <HiChevronDown className="navbar-chevron" />}
               </button>
             </li>
@@ -85,32 +80,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      {/* ── Mobile hamburger ─────────────────────────────────────────────── */}
-      <button
-        className="navbar-hamburger"
-        onClick={() => setMenuOpen((o) => !o)}
-        aria-label="Toggle menu"
-      >
-        {menuOpen ? <HiX /> : <HiMenu />}
-      </button>
-
-      {/* ── Mobile drawer ────────────────────────────────────────────────── */}
-      {menuOpen && (
-        <div className="navbar-drawer">
-          {NAV_LINKS.map(({ label, icon: Icon, href }) => (
-            <button
-              key={label}
-              className={`navbar-drawer-link ${active === label ? "navbar-drawer-link--active" : ""}`}
-              onClick={() => scrollTo(href, label)}
-            >
-              <Icon className="navbar-icon" />
-              <span>{label}</span>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* ── Ambient orbs + nav fade (owned by Navbar for historical reasons) */}
+      {/* ── Ambient orbs + nav fade ── */}
       <div className="landing-circle1" aria-hidden="true" />
       <div className="landing-circle2" aria-hidden="true" />
       <div className="nav-fade"        aria-hidden="true" />
