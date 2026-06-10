@@ -10,7 +10,6 @@ const K  = (t: string) => <span className="c-kw">{t}</span>;       // keyword  #
 const S  = (t: string) => <span className="c-str">{t}</span>;      // string   #ce9178
 const CM = (t: string) => <span className="c-cmt">{t}</span>;      // comment  #6a9955
 const P  = (t: string) => <span className="c-prop">{t}</span>;     // property #9cdcfe
-const T  = (t: string) => <span className="c-type">{t}</span>;     // type     #4ec9b0
 const PU = (t: string) => <span className="c-punc">{t}</span>;     // punct    #cccccc
 const FN = (t: string) => <span className="c-fn">{t}</span>;       // fn name  #dcdcaa
 
