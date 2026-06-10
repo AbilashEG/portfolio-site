@@ -47,11 +47,15 @@ const TechStackNew = () => {
         autoPlay loop muted playsInline
         style={{
           position: "absolute",
-          top: 0, left: 0,
-          width: "100%", height: "100%",
+          top: "0",
+          left: "0",
+          width: "100%",
+          height: "100%",
           objectFit: "cover",
-          opacity: 0.15,
+          opacity: 0.2,
           zIndex: 0,
+          display: "block",
+          pointerEvents: "none",
         }}
       >
         <source src="/video/TECH_STACK.webm" type="video/webm" />
