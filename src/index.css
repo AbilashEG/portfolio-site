@@ -18,7 +18,8 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #c2a4ff;
+  --accentColor: #A78BFA;
+  --accentDim: rgba(167, 139, 250, 0.15);
   --backgroundColor: #0b080c;
   --vh: 100vh;
   --vh: 100svh;
@@ -52,7 +53,6 @@ body {
     touch-action: manipulation;
   }
 
-  /* Ensure no fixed elements block scrolling */
   .container-main {
     position: static !important;
     height: auto !important;
@@ -127,14 +127,13 @@ body {
   flex-wrap: nowrap;
 }
 
+/* Tech stack section global styles */
 .techstack {
   width: 100%;
   position: relative;
   height: var(--vh);
   min-height: 100vh;
   margin: 0 auto;
-  margin-top: 0;
-  margin-bottom: 0;
   padding-top: 150px;
   padding-bottom: 150px;
   background: linear-gradient(180deg, rgba(11, 8, 12, 0.95) 0%, rgba(11, 8, 12, 0.98) 100%);
@@ -154,13 +153,13 @@ body {
   right: 0;
   bottom: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(194, 164, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(194, 164, 255, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 245, 255, 0.06) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
 
-.techstack>* {
+.techstack > * {
   position: relative;
   z-index: 1;
 }

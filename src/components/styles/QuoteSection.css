@@ -1,0 +1,60 @@
+/* ══════════════════════════════════════════════════════
+   Quote Section
+   ══════════════════════════════════════════════════════ */
+.quote-section {
+  width: 100%;
+  background-color: var(--backgroundColor);
+  padding: 100px 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Small label above — "MY APPROACH" */
+.quote-label {
+  margin: 0 0 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(234, 229, 236, 0.45);
+  opacity: 0; /* GSAP animates in */
+}
+
+/* Main quote line */
+.quote-text {
+  margin: 0;
+  font-size: clamp(2.8rem, 6.5vw, 7rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+  font-family: "Geist", sans-serif;
+  letter-spacing: -0.02em;
+  opacity: 0; /* GSAP animates in */
+}
+
+/* Last word — accent purple, no rainbow */
+.quote-gradient {
+  color: #A78BFA;
+  white-space: nowrap;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media only screen and (max-width: 768px) {
+  .quote-section {
+    padding: 70px 5%;
+  }
+
+  .quote-text {
+    font-size: clamp(2rem, 9vw, 3.5rem);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .quote-text {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+}

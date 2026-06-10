@@ -1,16 +1,36 @@
-import { useEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import HoverLinks from "./HoverLinks";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import {
+  HiHome,
+  HiUser,
+  HiCode,
+  HiBriefcase,
+  HiMail,
+  HiChevronDown,
+  HiMenu,
+  HiX,
+} from "react-icons/hi";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
 
+const NAV_LINKS = [
+  { label: "Home",    icon: HiHome,      href: "#landingDiv", dropdown: false },
+  { label: "About",   icon: HiUser,      href: "#about",      dropdown: true  },
+  { label: "Skills",  icon: HiCode,      href: "#skills",     dropdown: false },
+  { label: "Work",    icon: HiBriefcase, href: "#work",       dropdown: false },
+  { label: "Contact", icon: HiMail,      href: "#contact",    dropdown: false },
+];
+
 const Navbar = () => {
+  const [active, setActive]       = useState("Home");
+  const [menuOpen, setMenuOpen]   = useState(false);
+
   useEffect(() => {
-    // Initialize Lenis smooth scroll
+    // ── Lenis smooth scroll ───────────────────────────────────────────────
     lenis = new Lenis({
       duration: 1.7,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -22,82 +42,78 @@ const Navbar = () => {
       infinite: false,
     });
 
-    // Start paused
-    lenis.stop();
-
-    // Handle smooth scroll animation frame
     function raf(time: number) {
       lenis?.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
 
-    // Handle navigation links
-    let links = document.querySelectorAll(".header ul a");
-    links.forEach((elem) => {
-      let element = elem as HTMLAnchorElement;
-      element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          if (section && lenis) {
-            const target = document.querySelector(section) as HTMLElement;
-            if (target) {
-              lenis.scrollTo(target, {
-                offset: 0,
-                duration: 1.5,
-              });
-            }
-          }
-        }
-      });
-    });
-
-    // Handle resize
-    window.addEventListener("resize", () => {
-      lenis?.resize();
-    });
-
-    return () => {
-      lenis?.destroy();
-    };
+    window.addEventListener("resize", () => lenis?.resize());
+    return () => { lenis?.destroy(); };
   }, []);
+
+  const scrollTo = (href: string, label: string) => {
+    setActive(label);
+    setMenuOpen(false);
+    const target = document.querySelector(href) as HTMLElement | null;
+    if (!target) return;
+    if (lenis) {
+      lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+    } else {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          RH
-        </a>
-        <a
-          href="mailto:redoyanul1234@gmail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          redoyanul1234@gmail.com
-        </a>
-        <ul>
-          <li>
-            <a data-href="#about" href="#about">
-              <HoverLinks text="ABOUT" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
-            </a>
-          </li>
-          <li>
-            <a data-href="#contact" href="#contact">
-              <HoverLinks text="CONTACT" />
-            </a>
-          </li>
+      {/* ── Pill navbar ──────────────────────────────────────────────────── */}
+      <nav className="navbar-pill" aria-label="Main navigation">
+        <ul className="navbar-list">
+          {NAV_LINKS.map(({ label, icon: Icon, href, dropdown }) => (
+            <li key={label}>
+              <button
+                className={`navbar-link ${active === label ? "navbar-link--active" : ""}`}
+                onClick={() => scrollTo(href, label)}
+                aria-label={label}
+              >
+                <Icon className="navbar-icon" />
+                <span>{label}</span>
+                {dropdown && <HiChevronDown className="navbar-chevron" />}
+              </button>
+            </li>
+          ))}
         </ul>
-      </div>
+      </nav>
 
-      <div className="landing-circle1"></div>
-      <div className="landing-circle2"></div>
-      <div className="nav-fade"></div>
+      {/* ── Mobile hamburger ─────────────────────────────────────────────── */}
+      <button
+        className="navbar-hamburger"
+        onClick={() => setMenuOpen((o) => !o)}
+        aria-label="Toggle menu"
+      >
+        {menuOpen ? <HiX /> : <HiMenu />}
+      </button>
+
+      {/* ── Mobile drawer ────────────────────────────────────────────────── */}
+      {menuOpen && (
+        <div className="navbar-drawer">
+          {NAV_LINKS.map(({ label, icon: Icon, href }) => (
+            <button
+              key={label}
+              className={`navbar-drawer-link ${active === label ? "navbar-drawer-link--active" : ""}`}
+              onClick={() => scrollTo(href, label)}
+            >
+              <Icon className="navbar-icon" />
+              <span>{label}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* ── Ambient orbs + nav fade (owned by Navbar for historical reasons) */}
+      <div className="landing-circle1" aria-hidden="true" />
+      <div className="landing-circle2" aria-hidden="true" />
+      <div className="nav-fade"        aria-hidden="true" />
     </>
   );
 };

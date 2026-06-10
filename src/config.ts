@@ -1,193 +1,154 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
-        title: "AI & Full-Stack Developer",
-        description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
+        name: "Abilash",
+        fullName: "Abilash EG",
+        title: "Data & AI Engineer",
+        tagline: "Building Agentic AI Systems on AWS",
+        description: "Data & AI Engineer specialising in agentic AI systems on AWS. Building intelligent cloud-powered solutions with Amazon Bedrock, LangGraph, and AgentCore."
     },
     social: {
-        github: "red1-for-hek",
-        email: "redoyanul1234@gmail.com",
-        location: "Bangladesh"
+        github: "AbilashEG",
+        email: "abilashgomathi7@gmail.com",
+        location: "Coimbatore, India"
     },
     about: {
-        title: "About Me",
-        description: "I am a self-taught AI & Full-Stack Developer from Bangladesh. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and JARVIS-like Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas."
+        title: "About.",
+        paragraphs: [
+            "B.Tech CSE graduate from VIT Bhopal. Currently a Data & AI Engineer at Quadrasystems, working within the AWS SBU team.",
+            "I architect agentic AI systems using AWS Bedrock, LangGraph, and AgentCore. My work spans multi-account AWS architectures, serverless pipelines, and production-grade automation.",
+            "Official AWS Workshop Presenter — delivered the Bedrock AgentCore deep-dive across Bangalore, Chennai, Coimbatore, and Hyderabad."
+        ],
+        stats: [
+            { value: "2",   label: "Flagship\nProjects" },
+            { value: "4",   label: "Workshop\nCities" },
+            { value: "1",   label: "AWS\nCertification" },
+            { value: "10+", label: "AWS\nServices" }
+        ]
     },
     experiences: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
-            period: "2025 - Present",
-            location: "Bangladesh",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
+            position: "Data & AI Engineer",
+            company: "Quadrasystems.net — AWS SBU",
+            period: "Jun 2025 – Present",
+            location: "Coimbatore, India",
+            description: "Building production-grade agentic AI systems and cloud infrastructure on AWS.",
             responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
+                "🏆 AWS Migratapalooza India Hackathon 2025 — 1st Prize. Architected live database modernization using AWS DMS and SCT.",
+                "🎤 Official AWS Workshop Presenter — Delivered 'Diving Deep into Bedrock AgentCore' across Bangalore, Chennai, and Coimbatore. Covered all 8 AgentCore pillars: Runtime, Gateway, Identity, Memory, Tools, Observability, Evaluations, Policy. Designed a real end-to-end use case after Chennai feedback to replace dry notebook execution.",
+                "🏦 Cross-Account Infrastructure Automation · Banking & FSI — Built production Lambda-based health reporting system spanning 10+ AWS accounts. Used AWS Organizations for auto-discovery, STS AssumeRole for cross-account access, and three-level ThreadPoolExecutor for parallel execution. Reports delivered as Excel via SES daily.",
+                "👥 Internal Workforce Platform · AWS Team Tracker — Built full internal productivity platform for ~60 staff. Stack: Next.js 14, FastAPI on Lambda via ECR Docker, API Gateway, Cognito (5 RBAC roles), DynamoDB, Bedrock Nova Pro. 34 API endpoints. Zero EC2.",
+                "🤖 AI-Powered Workforce Platform · AWS Team Tracker — Designed autonomous multi-agent travel planning system: Amplify frontend, WebSocket API Gateway, AgentCore Runtime (Claude Sonnet 4 orchestrator), 7 specialized Lambda agents, MCP Server on ECS Fargate, DynamoDB state management.",
+                "📊 Presales & Solution Architecture · FSI, QSR, Pharma — Led presales calls across banking, QSR, and pharma sectors. Produced Azure-to-AWS migration mappings, Bedrock AgentCore deployment runbooks, and cost estimation documents. Positioned AgentCore and MCP Server as key differentiators.",
+                "🛡️ AI-Driven MSP Monitoring Dashboard — Enterprise AWS monitoring platform across 20+ services. Bedrock Nova Pro security analysis, 100+ automated rules, compliance mapping (CIS, PCI-DSS, HIPAA, GDPR), cost optimization engine with idle detection.",
+                "⚙️ L1 Activity Automation Bot — Agentic AI platform for AWS CloudWatch management across multiple enterprise accounts. Hub-and-spoke cross-account STS architecture, Amazon Nova Pro intent recognition, CI/CD via GitHub Actions."
             ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
-        },
-        {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Bangladesh",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
-            responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
-            ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
-        },
-        {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
-            period: "2024",
-            location: "Bangladesh",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
-            responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
-            ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
-        },
-        {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Bangladesh",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
-        },
-        {
-            position: "Graphic Designer",
-            company: "Freelance",
-            period: "2022",
-            location: "Bangladesh",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
-            responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
-            ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
-        },
-        {
-            position: "Microsoft Office",
-            company: "Begin Learning",
-            period: "2021",
-            location: "Bangladesh",
-            description: "Started my journey into the digital world by learning Microsoft Office tools. This foundational step introduced me to computers and sparked my curiosity for technology.",
-            responsibilities: [
-                "Learning Microsoft Word, Excel, and PowerPoint",
-                "Creating documents and presentations",
-                "Understanding basic computer operations",
-                "Building foundational digital skills"
-            ],
-            technologies: ["MS Word", "MS Excel", "MS PowerPoint", "Computer Basics"]
+            technologies: ["AWS Bedrock", "AgentCore", "LangGraph", "Lambda", "DynamoDB", "Next.js", "FastAPI", "Python", "STS", "ECS Fargate"]
         }
     ],
     projects: [
         {
             id: 1,
-            title: "Drishti",
-            category: "AI / LLM",
-            technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali."
+            title: "AI-Driven MSP Monitoring Dashboard",
+            category: "AWS · AI",
+            technologies: "AWS Bedrock · LangGraph · Next.js · Flask · React · TypeScript",
+            image: "/images/msp-dashboard.png",
+            github: "https://github.com/AbilashEG/aws-msp-dashboard",
+            description: "Enterprise AWS monitoring platform for MSPs with AI-powered security analysis, cost optimization, and multi-account resource tracking across 20+ services.",
+            bullets: [
+                "Multi-account monitoring with parallel scanning (5 accounts × 10 regions)",
+                "AI security analysis via Amazon Bedrock Nova Pro with compliance mapping (CIS, PCI-DSS, HIPAA, GDPR)",
+                "Cost optimization engine with idle detection and right-sizing recommendations",
+                "React + TypeScript frontend, Flask backend with cross-account AssumeRole"
+            ],
+            featured: true,
+            layout: "text-left"
         },
         {
             id: 2,
-            title: "VoteChain",
-            category: "Blockchain",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/votechain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking."
+            title: "L1 Activity Automation Bot",
+            category: "Agentic AI · AWS",
+            technologies: "Amazon Nova Pro · AWS Bedrock · DynamoDB · EC2 · React · Flask",
+            image: "/images/l1-bot.png",
+            github: "https://github.com/AbilashEG/l1-activityAutomation",
+            description: "Agentic AI platform that revolutionises AWS CloudWatch management across multiple enterprise accounts with natural language interface and autonomous deployment.",
+            bullets: [
+                "Multi-account EC2 discovery and CloudWatch Agent deployment (Windows/Linux)",
+                "Powered by Amazon Nova Pro for intent recognition and autonomous actions",
+                "Hub-and-spoke cross-account STS architecture",
+                "React frontend, Flask backend, CI/CD via GitHub Actions"
+            ],
+            featured: true,
+            layout: "text-right"
         },
         {
             id: 3,
-            title: "EIE - Earthquake Impact Estimator",
-            category: "IoT / Hardware",
-            technologies: "Arduino, C++, IoT Sensors, Python, ML, React",
-            image: "/images/eie.png",
-            description: "A practical circuit-based IoT system utilizing Arduino to predict earthquakes before they strike. Integrates hardware sensors for real-time seismic detection and impact estimation."
+            title: "Diabetes Prediction — SageMaker ML",
+            category: "ML · AWS",
+            technologies: "SageMaker · Python · XGBoost · Scikit-learn · S3",
+            image: "/images/diabetes-ml.png",
+            github: "https://github.com/AbilashEG/diabetes-prediction",
+            description: "Production ML model achieving 94.5% accuracy with AUC 0.9908, deployed on Amazon SageMaker with 3-tier risk classification and personalized health guidance.",
+            bullets: [
+                "94.5% accuracy, AUC 0.9908 — clinically validated model",
+                "3-tier risk classification with personalized health recommendations",
+                "Deployed on Amazon SageMaker with real-time inference endpoint",
+                "Clinical dataset preprocessing with advanced feature engineering"
+            ],
+            featured: false,
+            layout: ""
         },
         {
             id: 4,
-            title: "GameKroy",
-            category: "Full Stack",
-            technologies: "React, Node.js, MongoDB, Express, Stripe, TailwindCSS",
-            image: "/images/gamekroy.png",
-            description: "A full-featured e-commerce platform for gaming products. Includes user authentication, product catalog, shopping cart, secure payments, order tracking, and admin dashboard."
-        },
-        {
-            id: 5,
-            title: "RedxChess",
-            category: "AI / Game Engine",
-            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
-            image: "/images/redxchess.png",
-            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation."
-        },
-        {
-            id: 6,
-            title: "Floodhub",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/floodhub.png",
-            description: "A flood prediction model specifically designed for Bangladesh's river systems. Analyzes weather patterns, water levels, and historical data to provide accurate flood forecasts and alerts."
-        },
-        {
-            id: 7,
-            title: "Phoenix",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/phoenix.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience."
-        },
-        {
-            id: 8,
-            title: "HekTools",
-            category: "Security / Android",
-            technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
-            image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes."
+            title: "Workflow 360 — AI-Powered HRMS",
+            category: "AI · AWS · Full Stack",
+            technologies: "AWS Bedrock · Lambda · DynamoDB · Cognito · React · API Gateway",
+            image: "/images/workflow360.png",
+            github: "https://github.com/AbilashEG/End-to-End-HR-management-using-react-and-nodejs-and-aws-services-",
+            description: "AI-powered HR management portal on AWS automating core HR operations via Amazon Bedrock with 24/7 L1/L2 help desk, reducing manual HR workload by 80%.",
+            bullets: [
+                "Amazon Bedrock-powered 24/7 L1/L2 help desk with automatic request routing",
+                "Reduced manual HR workload by 80% through intelligent automation",
+                "Core HR operations automated: onboarding, leave, payroll queries",
+                "Serverless architecture — Lambda, API Gateway, DynamoDB, Cognito"
+            ],
+            featured: false,
+            layout: ""
         }
     ],
     contact: {
-        email: "redoyanul1234@gmail.com",
-        github: "https://github.com/red1-for-hek",
-        linkedin: "https://linkedin.com/in/red1-for-hek",
-        twitter: "https://x.com/red_1_ul",
-        facebook: "https://www.facebook.com/redoyanulhaque.hacker.official",
-        instagram: "https://www.instagram.com/red_1_ul"
+        email: "abilashgomathi7@gmail.com",
+        github: "https://github.com/AbilashEG",
+        linkedin: "https://www.linkedin.com/in/abilash-eg/",
+        medium: "https://medium.com/@abilashgomathi7",
+        twitter: "",
+        facebook: "",
+        instagram: ""
     },
     skills: {
         develop: {
-            title: "AI DEVELOPER",
-            description: "Building intelligent systems & AI solutions",
-            details: "Developing AI agents, chatbots, and machine learning models using Python, TensorFlow, and PyTorch. Specializing in LLMs, NLP, deep learning, and autonomous systems.",
-            tools: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "LLMs", "NLP", "Deep Learning", "Chatbots", "AI Agents"]
+            title: "CLOUD ENGINEERING",
+            description: "AWS-Native · Serverless · Infrastructure",
+            details: "Designing and operating multi-account AWS architectures with a serverless-first mindset. Expert in cross-account access patterns, infrastructure automation, cost optimisation, and security compliance across enterprise environments.",
+            tools: [
+                "AWS Organizations · STS AssumeRole",
+                "Lambda · API Gateway · ECR · Docker",
+                "DynamoDB · S3 · SES · EventBridge",
+                "Cognito · IAM · CloudWatch · SNS",
+                "Cross-account architecture (10+ accounts)",
+                "AWS Glue · Athena · QuickSight",
+                "CloudFormation · Amplify · Route 53",
+                "Cost optimization · Security compliance"
+            ]
         },
         design: {
-            title: "FULL-STACK",
-            description: "Modern web development & scalable applications",
-            details: "Building responsive and performant web applications using React, Next.js, Node.js, and databases. Creating seamless user experiences with modern UI/UX principles.",
-            tools: ["React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "TailwindCSS", "REST APIs", "Docker", "Git"]
+            title: "AGENTIC AI",
+            description: "Building autonomous AI systems on AWS",
+            details: "Architecting multi-agent systems with LangGraph and Amazon Bedrock. Specialising in AgentCore, RAG pipelines, foundation model orchestration, and production-grade AI automation on AWS.",
+            tools: ["AWS Bedrock", "LangGraph", "AgentCore", "Amazon Nova Pro", "Python", "LLMs", "RAG", "Multi-Agent", "Serverless", "STS"]
         }
-    }
+    },
+    // Cycling words for hero right side
+    cyclingWords: ["AGENTIC AI", "DATA ENGINEER", "AWS BUILDER"],
+    heroSubtitle: "Building Intelligent Cloud-Powered Solutions",
+    heroSubtitleSub: "Using AWS Bedrock · LangGraph · AgentCore"
 };
-
-

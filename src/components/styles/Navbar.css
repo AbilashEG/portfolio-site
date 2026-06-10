@@ -1,83 +1,159 @@
-.header {
-  display: flex;
-  max-width: var(--cMaxWidth);
-  width: var(--cWidth);
-  justify-content: space-between;
-  padding: 15px 0px;
-  margin-bottom: -80px;
-  box-sizing: border-box;
+/* ══════════════════════════════════════════════════════
+   Pill navbar
+   ══════════════════════════════════════════════════════ */
+.navbar-pill {
   position: fixed;
+  top: 32px;
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
-  z-index: 9999;
+  z-index: 100;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 14px 36px;
+
+  /* Fade in via initialFX */
+  opacity: 0;
 }
-.header ul {
-  font-size: 11px;
-  display: flex;
-  flex-direction: column;
+
+.navbar-list {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  column-gap: 20px;
-  row-gap: 6px;
-  align-items: end;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.header ul li {
-  margin-left: 0px;
-  letter-spacing: 0.8px;
-  color: #ccc;
-  font-weight: 600;
+
+/* ── Individual link button ──────────────────────────────────────────────── */
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: #eae5ec;
+  font-family: "Geist", "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
   cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
-.navbar-connect {
-  position: absolute;
-  display: none;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 13px;
-  letter-spacing: 0.8px;
+
+.navbar-link:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.navbar-link--active {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
+  color: #ffffff;
   font-weight: 500;
 }
-.navbar-title {
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.2px;
+
+/* ── Icons ───────────────────────────────────────────────────────────────── */
+.navbar-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
-@media only screen and (min-width: 500px) {
-  .header {
-    padding: 20px 0px;
+
+.navbar-chevron {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════════
+   Mobile hamburger button
+   ══════════════════════════════════════════════════════ */
+.navbar-hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #eae5ec;
+  font-size: 1.4rem;
+  padding: 8px 10px;
+  cursor: pointer;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* ══════════════════════════════════════════════════════
+   Mobile drawer
+   ══════════════════════════════════════════════════════ */
+.navbar-drawer {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 16px;
+  z-index: 150;
+  background: rgba(11, 8, 12, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 8px;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 160px;
+}
+
+.navbar-drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #eae5ec;
+  font-family: "Geist", "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.navbar-drawer-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.navbar-drawer-link--active {
+  background: rgba(167, 139, 250, 0.1);
+  color: #A78BFA;
+}
+
+/* ══════════════════════════════════════════════════════
+   Responsive — hide pill, show hamburger on mobile
+   ══════════════════════════════════════════════════════ */
+@media only screen and (max-width: 768px) {
+  .navbar-pill {
+    display: none;
   }
-  .header ul {
-    flex-direction: row;
+
+  .navbar-hamburger {
+    display: flex;
     align-items: center;
-    font-size: 14px;
+    justify-content: center;
   }
-  .header ul li {
-    color: #eae5ec;
-  }
-  .navbar-title {
-    font-size: 16px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .navbar-connect {
-    display: block;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .header {
-    padding: 35px 0px;
-  }
-  .header ul {
-    column-gap: 80px;
-    font-size: 16px;
-  }
-  .navbar-connect {
-    font-size: 16px;
-  }
-  .navbar-title {
-    font-size: 18px;
+
+  .navbar-drawer {
+    display: flex;
   }
 }
