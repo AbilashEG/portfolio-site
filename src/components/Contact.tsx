@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SERVICE_ID  = "service_rvpakmh";
+const SERVICE_ID  = "service_u9rf0om";
 const TEMPLATE_ID = "template_js65gcv";
 const PUBLIC_KEY  = "mjwrLTppWMG32EGZu";
 
