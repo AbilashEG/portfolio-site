@@ -61,8 +61,8 @@ const LINES: React.ReactNode[] = [
 const STATS = [
   { value: "2",   label: "Flagship\nProjects"   },
   { value: "4",   label: "Workshop\nCities"     },
-  { value: "1",   label: "AWS\nCertification"   },
-  { value: "10+", label: "AWS Accounts\nAutomated" },
+  { value: "3+",   label: "AWS\nCertification"   },
+  { value: 30+", label: "AWS Accounts\nAutomated" },
 ];
 
 const About = () => {
